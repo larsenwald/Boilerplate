@@ -36,7 +36,7 @@ import axios from "axios";
 // GET request to a REST endpoint
 try {
     const response = await axios.get("https://api.example.com/data");
-    res.json(response.data);
+    console.log(response.data);
 } catch (error) {
     res.status(500).json({ error: "Something went wrong" });
 }
@@ -54,7 +54,7 @@ try {
         }
     );
 
-    res.json(response.data);
+    console.log(response.data);
 } catch (error) {
     res.status(500).json({ error: "Something went wrong" });
 }
