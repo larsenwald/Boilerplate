@@ -34,32 +34,28 @@ app.use(express.static("public"));
 import axios from "axios";
 
 // GET request to a REST endpoint
-app.get("/", async (req, res) => {
-    try {
-        const response = await axios.get("https://api.example.com/data");
-        res.json(response.data);
-    } catch (error) {
-        res.status(500).json({ error: "Something went wrong" });
-    }
-});
+try {
+    const response = await axios.get("https://api.example.com/data");
+    res.json(response.data);
+} catch (error) {
+    res.status(500).json({ error: "Something went wrong" });
+}
 
 // POST request
-app.post("/", async (req, res) => {
-    try {
-        const response = await axios.post(
-            "https://api.example.com/data",
-            { key1: "value1", key2: "value2" }, // Data to be passed
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: "Bearer YOUR_ACCESS_TOKEN",
-                },
-            }
-        );
+try {
+    const response = await axios.post(
+        "https://api.example.com/data",
+        { key1: "value1", key2: "value2" }, // Data to be passed
+        {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer YOUR_ACCESS_TOKEN",
+            },
+        }
+    );
 
-        res.json(response.data);
-    } catch (error) {
-        res.status(500).json({ error: "Something went wrong" });
-    }
-});
+    res.json(response.data);
+} catch (error) {
+    res.status(500).json({ error: "Something went wrong" });
+}
 ```
