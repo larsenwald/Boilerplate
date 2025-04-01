@@ -59,3 +59,15 @@ try {
     res.status(500).json({ error: "Something went wrong" });
 }
 ```
+### PostgreSQL
+```javascript
+import pg from "pg";
+const db = new pg.Client({
+  user: "myusername", //default username is "postgres"
+  host: "localhost",
+  database: "mydatabase",
+  password: "mypassword123",
+  port: 5432,
+});
+db.connect();
+```
