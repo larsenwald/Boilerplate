@@ -6,6 +6,7 @@ A repository where I store boilerplate code for the tools, frameworks, and langu
 - [Node.js](#nodejs)
   - [Basic Express Server Startup](#basic-express-server-startup)
   - [Axios](#axios)
+  - [PostgreSQL](#postgresql)
 
 ## Node.js
 
